@@ -1,21 +1,56 @@
-# CRIAR UM CRUD AQUI. 
 # ESTE CRUD DEVE SER SIMPLES, ENTAO NAO HA NECESSIDADE DE USAR UM BANCO DE DADOS.
 # VOU CONSTRUIR USANDO UM ARQUIVO CSV.
 # COMO MODELO DE TRABALHO, VOU USAR O CONCEITO DE ESTACOES DE TRABALHO, WORKSTATIONS(WS).
 # CABECALHO: (WS_ID, WS_NAME,         CITY, WORKERS) 
 # EXEMPLO  : (    1, MOINHOS, PORTO ALEGRE,      33)
-# POR CONVENCAO, OS NOMES DE VARIAVEIS SERAO EM INGLES.   
 
-# READ A FILE IN CSV FORMAT
+def adicionar():
+  print("Chama método ADICIONAR")
 
-# BUILD AN INTERFACE TO WALK THROUGH THE CRUD
+def editar():
+  print("Chama método EDITAR")
 
-# C : CREATE A NEW LINE REGISTER
+def visualizar():
+  print("Chama método VISUALIZAR")
 
-# R : READ ALL REGISTERS
+def visualizarUmRegistro():
+  print("Chama método VISUALIZAR UM SOMENTE")
 
-# U : UPDATE A EXISTING REGISTER
+def deletar():
+  print("Chama método DELETAR")
 
-# D : DELETE A EXISTING REGISTER
+loopAtivo = True
 
-# EXTRA : READ 1 SPECIFIC REGISTER
+while loopAtivo:
+  print("\n\nDigite a opção desejada: \n",
+        "A - Adicionar\n",
+        "E - Editar\n",
+        "V - Visualizar tudo\n",
+        "U - Visualizar Um\n",
+        "D - Deletar\n",
+        "S - Sair")
+  opcao = input()
+
+  # DESCOBRIR COMO FAZER A LEITURA DE UM CSV
+
+  if opcao == "A" or opcao == "a":
+    adicionar()
+
+  elif opcao == "E" or opcao == "e":
+    editar()
+
+  elif opcao == "V" or opcao == "v":
+    visualizar()
+
+  elif opcao == "U" or opcao == "u":
+    visualizarUmRegistro()
+
+  elif opcao == "D" or opcao == "d":
+    deletar()
+
+  elif opcao == "S" or opcao == "s":
+    print("Saindo. . . ")
+    loopAtivo = False
+
+  else:
+    print("Opção incorreta, digite novamente.\n\n")
